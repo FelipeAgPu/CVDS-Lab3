@@ -1,6 +1,5 @@
-package hangman.model.dictionary;
+package hangman.model;
 
-import hangman.model.GameScore;
 
 public class PowerBonusScore implements GameScore {
     /**
@@ -13,7 +12,7 @@ public class PowerBonusScore implements GameScore {
     public int calculateScore(int correctCount, int incorrectCount){
         int score = 0;
         double bonus = 0;
-        for (int i=0; i <= correctCount; i++){
+        for (int i=1; i <= correctCount; i++){
             bonus = Math.pow(5, i);
         }
 
